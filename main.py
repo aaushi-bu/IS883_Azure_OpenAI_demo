@@ -29,7 +29,7 @@ def generate_lyrics(artist_name, genre, subject=None, rhyme=None, temperature=0.
 # Function to translate text from English to Hindi
 def translate_to_hindi(text):
     translator = GoogleTranslator()
-    translation = translator.translate(text, dest='hi')
+    translation = translator.translate(text, dest='hindi')
     return translation.text
     
 # Streamlit app

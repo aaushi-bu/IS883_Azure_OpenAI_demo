@@ -13,7 +13,7 @@ def generate_lyrics(artist_name, genre, subject=None, rhyme=None, temperature=0.
 
     # Modify the prompt based on the use_slang parameter
     if use_slang:
-        prompt += " You are allowed to use slang and casual language in the lyrics in this case."
+        prompt += " You should use slang in the lyrics in this case."
 
     # Generate lyrics using OpenAI GPT-3
     response = openai.Completion.create(
@@ -41,7 +41,7 @@ genre = st.text_input("Enter the genre:")
 subject = st.text_input("Subject (Optional):", "Enter the subject for this particular song")
 rhyme = st.text_input("Rhyme (Optional):", "Enter a particular word or phrase that you would like used")
 temperature = st.slider("Select temperature", 0.1, 1.0, 0.7, 0.1)
-use_slang = st.checkbox("Allow Slang in Lyrics", value=False, key='slang_checkbox', help='Use slang and casual language in the lyrics.')
+use_slang = st.checkbox("Allow Slang in Lyrics", value=False, key='slang_checkbox', help='Use slang language in the lyrics.')
 # Toggle button for translation
 translate_toggle = st.checkbox("Translate to Hindi", value=False, key='translate_toggle', help='Toggle to translate the generated lyric to Hindi.')
 
